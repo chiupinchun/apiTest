@@ -18,7 +18,7 @@
   <button @click="postApi">試發街口</button>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import {ref,reactive} from 'vue'
 import axios from 'axios'
 
