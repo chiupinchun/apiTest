@@ -18,7 +18,7 @@
   <button @click="postApi">試發街口</button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import {ref,reactive} from 'vue'
 import axios from 'axios'
 
@@ -32,7 +32,7 @@ async function postApi() {
   params.forEach(param=>{
     datas.append(param.key,param.value)
   })
-  const result = await axios.post(webAdress,datas)
+  const result = await axios.post(webAdress.value,datas)
   console.log(result)
 }
 </script>
